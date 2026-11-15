@@ -114,7 +114,4 @@ There is no build step.
 
 Three.js and the font load from the internet, so you need a connection.
 
-## Credits
-
-Made by **Versha Singh**, with the help of AI (Claude).
 
