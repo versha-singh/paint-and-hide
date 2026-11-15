@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Paint &amp; Hide</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="cv"></canvas>
+
+<div id="hud" hidden>
+  <div class="meters px">
+    <div>Hidden</div><div class="bar"><i id="hid"></i></div>
+    <div>Seeker suspicion</div><div class="bar"><i id="sus"></i></div>
+  </div>
+  <div id="top" class="px"><div id="phase"></div><div id="time"></div></div>
+  <div id="toast" class="px"></div>
+  <div id="tasks" class="px" style="display:none"></div>
+  <div id="count" class="px"><small>STAY HIDDEN</small><b>60</b></div>
+  <canvas id="mm" width="220" height="100"></canvas>
+  <div id="cross"></div>
+  <div id="touch"><div id="joy" hidden><i id="knob"></i></div><div id="tbtns"><button class="btn px" id="tP">PAINT</button><button class="btn px" id="tV">VIEW</button><button class="btn px" id="tS">POSE</button><button class="btn px" id="tM">MAP</button><button class="btn px" id="tF">FILTER</button><button class="btn px" id="tX">SOUND</button></div></div>
+  <div id="hint"><kbd>WASD</kbd> move &nbsp;<kbd>Mouse</kbd> look &nbsp;<kbd>E</kbd> paint &nbsp;<kbd>V</kbd> view &nbsp;<kbd>Q</kbd> pose &nbsp;<kbd>N</kbd> map &nbsp;<kbd>M</kbd> mute &nbsp;<kbd>G</kbd> filter &nbsp;<kbd>H</kbd> hide this &nbsp;&middot;&nbsp; Stand still to stay hidden</div>
+</div>
+
+<div id="paint" hidden>
+  <div id="phint" class="px">1 PICK COLOUR (F) &middot; 2 DRAG ON BODY &middot; RIGHT-DRAG TURNS</div>
+  <div class="row"><input type="color" id="col" value="#8a5a2b" title="Colour"><span id="sws"></span></div>
+  <div class="row"><button class="btn" id="eye" title="F">Pick colour (F)</button><button class="btn" id="fill" title="B">Fill body (B)</button><button class="btn" id="clr" title="C">Clear (C)</button><label>Brush <input type="range" id="bs" min="1" max="4" value="2"></label></div>
+  <div class="row"><button class="btn" id="rl">&#10226;</button><button class="btn" id="rr">&#10227;</button><button class="btn" data-p="0">Stand</button><button class="btn" data-p="1">Crouch</button><button class="btn" data-p="2">Arms out</button><button class="btn" data-p="3">Sit</button><button class="btn big" id="done" style="margin:0;padding:10px 16px">Done (E)</button></div>
+</div>
+
+<div id="tag" class="px" hidden></div><div id="stag" class="px" hidden></div><div id="welcome" class="px" hidden></div>
+<div id="vig" style="display:none;position:fixed;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.65) 100%)"></div>
+<div id="rotate" class="px">TURN YOUR PHONE SIDEWAYS TO PLAY</div>
+<div id="splash" class="px"><div class="sp"><p>PRESENTED BY</p><h2>VERSHA SINGH</h2></div></div>
+<div class="ov" id="menu">
+  <h1 class="px">PAINT<br><b>&amp; HIDE</b></h1>
+  <p>You are a blank white blob in a wooden hut. Paint yourself to match the room, strike a pose and keep still. The seeker is coming.</p>
+  <p><kbd>E</kbd> opens the paint panel. Pick colours straight off the walls with the eyedropper (<kbd>F</kbd>), then paint your body.</p>
+  <p>You have 60 seconds before the seeker enters, and you can already do the 3 tasks: collect 3 paint pots, strike a pose at the meadow painting, and water the garden. Finish them all and the seeker comes for you. Stay hidden for 60 seconds to win. The gallery has four connected rooms and a fenced garden out the back, so explore the doorways.</p>
+  <p>Controls: keyboard and mouse, a game controller (left stick move, right stick look, A paint, Y view, X pose), or touch. On a phone, hold it sideways: left thumb moves, right thumb looks, and the buttons on the right do the rest.</p>
+  <input id="pname" class="px" maxlength="12" value="Chameleon" placeholder="Your name" aria-label="Your name">
+  <button class="btn big px" id="play">PLAY</button>
+  <button class="btn px" id="fbtn" style="margin-top:10px">FILTER: NORMAL</button>
+</div>
+<div class="ov" id="end" hidden>
+  <h1 class="px" id="etitle"></h1><p id="etext"></p>
+  <button class="btn big px" id="again">PLAY AGAIN</button>
+</div>
+<div class="ov" id="pause" hidden>
+  <h1 class="px" style="font-size:24px">PAUSED</h1><p>Click to get back in the hut.</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/core.js"></script>
+<script src="js/world.js"></script>
+<script src="js/player.js"></script>
+<script src="js/seeker.js"></script>
+<script src="js/input.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
