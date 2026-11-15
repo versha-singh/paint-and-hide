@@ -10,7 +10,8 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=black)
 ![Platform](https://img.shields.io/badge/Platform-Laptop%20%7C%20Phone-brightgreen)
 
-<img width="1087" height="821" alt="image" src="https://github.com/user-attachments/assets/e23919eb-54ec-40db-ba07-ebf3a37b803f" alt="Gameplay screenshot" width="600">
+<img src="https://github.com/user-attachments/assets/a75be8d7-c67a-4b85-be16-46bf56ae8109"
+ alt="Gameplay screenshot" width="500">
 
 
 </div>
