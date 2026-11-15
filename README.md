@@ -94,15 +94,14 @@ Finish all **3 tasks**, then stay hidden for **60 seconds** to win.
 ```
 index.html
 style.css
-js/
-├── core.js      renderer, scene, procedural textures
-├── world.js     gallery, garden, sky and clouds
-├── player.js    paintable body, spawn effect
-├── seeker.js    seeker model, visibility meter
-├── input.js     controls, camera, painting, movement
-├── ai.js        seeker behaviour
-├── audio.js     sound and filters
-└── game.js      tasks, game flow, minimap, main loop
+core.js      renderer, scene, procedural textures
+world.js     gallery, garden, sky and clouds
+player.js    paintable body, spawn effect
+seeker.js    seeker model, visibility meter
+input.js     controls, camera, painting, movement
+ai.js        seeker behaviour
+audio.js     sound and filters
+game.js      tasks, game flow, minimap, main loop
 ```
 
 ## Run it locally
@@ -119,4 +118,3 @@ Three.js and the font load from the internet, so you need a connection.
 
 Made by **Versha Singh**, with the help of AI (Claude).
 
-Inspired by Meccha Chameleon by lemorion_1224. The gallery, tasks, seeker AI, code, textures and sounds in this repo are generated in code, with no copied assets.
