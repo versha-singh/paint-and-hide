@@ -4,7 +4,7 @@
 
 **A 3D hide-and-seek browser game. Paint yourself to blend in, finish your tasks, and outsmart the seeker.**
 
-### [▶ Play now](ADD-YOUR-LIVE-LINK-HERE)
+### [▶ Play now](https://versha-singh.github.io/paint-and-hide/)
 
 ![Three.js](https://img.shields.io/badge/Three.js-r128-black?logo=three.js)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=black)
